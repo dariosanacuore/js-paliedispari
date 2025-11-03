@@ -1,4 +1,4 @@
-/** 
+/**
  * Palidroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma (NON usare split, reverse e join)
@@ -28,7 +28,7 @@ Se sì, di che tipo?
 //param:parola da trasformare
 //return true or false
 
-/** 
+
 function isWordPalidroma(word) {
     let word2 = "";
     let isPalidroma = false;
@@ -51,7 +51,7 @@ function isWordPalidroma(word) {
 
 let result = isWordPalidroma();
 console.log(result);
-*/
+
 
 
 
@@ -66,6 +66,8 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 
  */
+
+
 
 function pariDispari(num) {
     let scelta;
@@ -93,8 +95,14 @@ function pariDispari(num) {
             return "Ha vinto il computer";
         }
     }
+
 }
 
 let result2 = pariDispari();
 console.log(result2);
+
+
+
+
+
 
