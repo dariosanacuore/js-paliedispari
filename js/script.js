@@ -28,11 +28,12 @@ Se sì, di che tipo?
 //param:parola da trasformare
 //return true or false
 
+// girafarig 
 
 function isWordPalidroma(word) {
     let word2 = "";
     let isPalidroma = false;
-    word = prompt("Inserisci una parola: ");
+
     for (let i = word.length - 1; i >= 0; i--) {
         word2 = word2 + word[i];
     }
@@ -40,17 +41,16 @@ function isWordPalidroma(word) {
         isPalidroma = true;
     }
 
-    if (isPalidroma === true) {
-        return "La parola è palidroma"
-    } else {
-        return "La parola non è palidroma";
-    }
-
-
+    return isPalidroma;
 }
 
-let result = isWordPalidroma();
-console.log(result);
+const wordUser = prompt("Inserisci una parola: ");
+let isPalidroma = isWordPalidroma(wordUser);
+if (isPalidroma === true) {
+    console.log("La parola è palidroma");
+} else {
+    console.log("La parola non è palidroma");
+}
 
 
 
@@ -72,8 +72,6 @@ Dichiariamo chi ha vinto.
 function pariDispari(num) {
     let scelta;
     let randomNum;
-    scelta = prompt("Decidi se inserire pari o dispari");
-    num = parseInt(prompt("Inserisci un numero da 1 a 5: "));
     randomNum = Math.floor(Math.random() * 5) + 1;
     console.log("Hai inserito:", scelta);
     console.log("Computer", randomNum);
@@ -83,20 +81,22 @@ function pariDispari(num) {
 
     if (somma % 2 === 0) {
         if (scelta === "pari") {
-            return "Ha vinto l'utente"
+            console.log("Ha vinto l'utente");
         } else if (scelta === "dispari") {
-            return "Ha vinto il computer";
+            console.log("Ha vinto il computer");
         }
     } else {
         if (scelta === "dispari") {
-            return "Ha vinto l'utente"
+            console.log("Ha vinto l'utente");
         }
         else if (scelta === "pari") {
-            return "Ha vinto il computer";
+            console.log("Ha vinto il computer");
         }
     }
 
 }
+scelta = prompt("Decidi se inserire pari o dispari");
+num = parseInt(prompt("Inserisci un numero da 1 a 5: "));
 
 let result2 = pariDispari();
 console.log(result2);
