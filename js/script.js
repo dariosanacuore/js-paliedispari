@@ -1,14 +1,7 @@
-/**
+/** 
  * Palidroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma (NON usare split, reverse e join)
-
-Pari e Dispari
-L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-Sommiamo i due numeri
-Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-Dichiariamo chi ha vinto.
 
 Consigli del giorno
 Scriviamo sempre in italiano i passaggi che vogliamo fare
@@ -19,7 +12,8 @@ Come dovrebbe chiamarsi?
 Ho bisogno di parametri?
 Devo restituire un valore?
 Se sì, di che tipo?
- */
+*/
+
 
 
 
@@ -34,6 +28,7 @@ Se sì, di che tipo?
 //param:parola da trasformare
 //return true or false
 
+/** 
 function isWordPalidroma(word) {
     let word2 = "";
     let isPalidroma = false;
@@ -46,13 +41,60 @@ function isWordPalidroma(word) {
     }
 
     if (isPalidroma === true) {
-        console.log("La parola è palidroma")
+        return "La parola è palidroma"
     } else {
-        console.log("La parola non è palidroma");
+        return "La parola non è palidroma";
     }
-    return isPalidroma;
+
 
 }
 
 let result = isWordPalidroma();
 console.log(result);
+*/
+
+
+
+
+
+/**
+ * Pari e Dispari
+L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+Sommiamo i due numeri
+Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+Dichiariamo chi ha vinto.
+
+ */
+
+function pariDispari(num) {
+    let scelta;
+    let randomNum;
+    scelta = prompt("Decidi se inserire pari o dispari");
+    num = parseInt(prompt("Inserisci un numero da 1 a 5: "));
+    randomNum = Math.floor(Math.random() * 5) + 1;
+    console.log("Hai inserito:", scelta);
+    console.log("Computer", randomNum);
+    console.log("Utente", num);
+    let somma = num + randomNum;
+    console.log("Somma:", somma);
+
+    if (somma % 2 === 0) {
+        if (scelta === "pari") {
+            return "Ha vinto l'utente"
+        } else if (scelta === "dispari") {
+            return "Ha vinto il computer";
+        }
+    } else {
+        if (scelta === "dispari") {
+            return "Ha vinto l'utente"
+        }
+        else if (scelta === "pari") {
+            return "Ha vinto il computer";
+        }
+    }
+}
+
+let result2 = pariDispari();
+console.log(result2);
+
