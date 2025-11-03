@@ -20,3 +20,39 @@ Ho bisogno di parametri?
 Devo restituire un valore?
 Se sì, di che tipo?
  */
+
+
+
+//Palidroma
+
+
+//Dati da raccogliere
+
+//parola dell'utente
+
+//funzione che verifica che la parola sia una paliandroma o meno
+//param:parola da trasformare
+//return true or false
+
+function isWordPalidroma(word) {
+    let word2 = "";
+    let isPalidroma = false;
+    word = prompt("Inserisci una parola: ");
+    for (let i = word.length - 1; i >= 0; i--) {
+        word2 = word2 + word[i];
+    }
+    if (word === word2) {
+        isPalidroma = true;
+    }
+
+    if (isPalidroma === true) {
+        console.log("La parola è palidroma")
+    } else {
+        console.log("La parola non è palidroma");
+    }
+    return isPalidroma;
+
+}
+
+let result = isWordPalidroma();
+console.log(result);
